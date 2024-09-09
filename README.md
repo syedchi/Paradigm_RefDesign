@@ -1,7 +1,7 @@
 # Paradigm's AWS Reference Architecture
 I've documented the AWS architecture for Paradigm Shift in a separate file. You can view the full diagram and details by visiting the [AWS Architecture Diagram](./AWS.md).
 
-![AWS Architecture Diagram](./AWS.md)
+![AWS Architecture Diagram](./aws_architecture_diagram-1.png
 ## Overview
 This architecture depicts how Paradigm's clinical research platform integrates with AWS cloud infrastructure, third-party SaaS providers, and the on-premise corporate data center. It emphasizes secure data sharing, scalability, compliance, and integration with cloud-native services like Amazon RDS, EC2, and EKS. 
 
