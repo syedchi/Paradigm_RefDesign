@@ -5,7 +5,7 @@ name: render-md-mermaid
 on:
   push:
     paths:
-      - 'AWS.md'
+      - '**.md'
 
 jobs:
   render-md-mermaid:
