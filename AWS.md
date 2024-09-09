@@ -67,3 +67,5 @@ graph TD;
   %% Data sharing and auditing
   D02 --> J01(AWS CloudTrail: Data Sharing):::s3
   J01 --> H01
+
+```
