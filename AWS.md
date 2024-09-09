@@ -1,3 +1,7 @@
+# AWS Architecture Diagram
+
+This diagram represents the AWS infrastructure for Paradigm Shift.
+
 ```mermaid
 
 graph TD;
