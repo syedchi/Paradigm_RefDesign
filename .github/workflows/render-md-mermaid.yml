@@ -1,6 +1,6 @@
 # .github/workflows/render-md-mermaid.yml
 
-name: render-md-mermaid
+name: Render Mermaid Diagrams
 
 on:
   push:
@@ -8,18 +8,26 @@ on:
       - '**.md'
 
 jobs:
-  render-md-mermaid:
+  render-mermaid:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3   # Updated to the latest version
 
-      - name: Render images for every Mermaid diagram in all Markdown files (*.md) in the repo
-        uses: nielsvaneck/render-md-mermaid@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-      - name: Commit rendered png and svg files
+      - name: Install Mermaid CLI
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Render Mermaid diagrams from Markdown
+        run: mmdc -i AWS.md -o AWS_diagram.png   # Render Mermaid diagrams into PNG format
+
+      - name: Commit rendered diagrams
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: "*[.svg,.png]"
-          commit_message: automatically rendered mermaid diagrams
+          commit_message: "Automatically rendered Mermaid diagrams"
+          file_pattern: "*.png"
