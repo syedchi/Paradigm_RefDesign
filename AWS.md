@@ -1,3 +1,5 @@
+```mermaid
+
 graph TD;
   
   %% Defining the styles to mimic the reference diagram
